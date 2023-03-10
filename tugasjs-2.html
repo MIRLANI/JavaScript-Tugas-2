@@ -1,0 +1,41 @@
+<script>
+    pegawai = "Muhammad Mirlani";
+    jabatan = "Manager";
+    status = "Belum";
+    proses = " ";
+
+    // gaji pokok berdasarkan jabatan
+    if (jabatan == "Manager"){
+        gajiPokok = 10000000;
+    }else if (jabatan == "Asistem Manager") {
+        gajiPokok = 8000000;
+    }else if (jabatan == "Staf"){
+        gajiPokok = 5000000;
+    }else{
+        gajiPokok = 0;
+    }
+
+    // hitung tunjangan jabatan
+    tunjangan_jabatan = 0.1 * gajiPokok;
+
+    // BPJS
+    bpjs = 0.1 * gajiPokok;
+
+    // tunjangan keluarga jika pegawai sudah menikah
+    if (status == "Menikah") {
+        tunjanganKeluarga = 0.1 * gajiPokok;
+    }else{
+        tunjanganKeluarga = 0;
+    }
+
+    proses = gajiPokok + tunjangan_jabatan + bpjs + tunjanganKeluarga;
+    document.write("Data pegawai: <br>" + 
+    "Nama Pegawai: " + pegawai +
+    "<br> Jabatan: " + jabatan +
+    "<br> Gaji Pokok: " + gajiPokok +
+    "<br> Tunjangan Jabatan: " + tunjangan_jabatan +
+    "<br> BPJS: " + bpjs +
+    "<br> Tunjangan Keluarga: " + tunjanganKeluarga +
+    "<br> Total Pengahasilan: " + proses);
+
+</script>
